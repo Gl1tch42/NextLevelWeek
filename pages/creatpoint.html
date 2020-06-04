@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto de coleta cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/creatpoint.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+
+</head>
+<body>
+
+    <div id="page-creat">
+
+
+            <header>
+                <img src="/icones/logo.svg" alt="Ecoleta">
+                <a href="#">
+                    <span></span>
+                    voltar para a home
+                </a>
+            </header>
+            
+            <form action="">
+                <h1>cadastro do ponto de coleta</h1>
+
+                <fieldset>
+
+                    <legend>
+                        <h2>dados da entidade</h2>
+                    </legend>
+
+                    <div class="field">
+                        <label for="name">nome da entidade</label>
+                        <input type="text" name="name">
+                    </div>
+
+                    <div class="field-g">
+
+                        <div class="field">
+
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address">
+
+                        </div>
+
+                        <div class="field">
+
+                            <label for="address2">numero/complemento</label>
+                            <input type="text" name="address2">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-g">
+
+                        <div class="field">
+
+                            <label for="state">Estado</label>
+                            <select name="uf">
+                                <option value="">Selecione o Estado</option>
+                            </select>
+
+                        </div>
+
+                        <div class="field">
+
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled>
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+
+                        </div>
+
+                        
+
+                    </div>
+
+                </fieldset>
+
+
+
+
+
+
+
+
+
+                <fieldset>
+                    <legend>
+                        <h2>itens de coleta</h2>
+                    </legend>
+                </fieldset>
+
+                <button type="submit">cadastrar ponto de coleta</button>
+            </form>
+
+    </div>
+    
+    <script src="../scripts/creatpoint.js"></script>
+</body>
+</html>
