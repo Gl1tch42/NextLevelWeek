@@ -16,6 +16,9 @@
     #page-home main{
         align-items: center;
     }
+    #page-search .cards{
+        grid-template-columns: 1fr;
+    }
 }
 @media(min-width: 1700px){
     #page-home{
