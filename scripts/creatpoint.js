@@ -68,7 +68,7 @@ function handleSelectedItem (event){
         return itemFound
     })
     //se ja estiver selecionado, tirar da seleçao
-    if(alreadyselected != -1){
+    if(alreadyselected >= 0){
         //tirar da seleçao
         const filteredItens = selectedItens.filter(function(item){
             const itemDifferent = item != itemId
