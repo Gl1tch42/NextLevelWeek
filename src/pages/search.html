@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}
+    <title>Resultado</title>
+{% endblock title %}
+{% block styles %}
+    <link rel="stylesheet" href="styles/search.css">
+{% endblock styles %}
+
+{% set SetId = "page-search" %}
+
+{% block conteudo %}
+    {% include "partes/page-header.html" %}
+            
+    <main>
+        <h4>
+            <strong>2 pontos</strong> encontrados
+        </h4>
+        <div class="cards">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528190336454-13cd56b45b5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="colectoria">
+                <h1>colectoria</h1>
+                <h3>residuos eletronicos, lâmpadas</h3>
+                <p>
+                    Rio de Janeiro, Rio de Janeiro <br/>
+                    Tres Rios, Freguesia<br/>
+                    Numero 555
+                </p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=801&q=80" alt="colectoria">
+                <h1>paipersider</h1>
+                <h3>papéis e papelão</h3>
+                <p>
+                    Rio de Janeiro, Rio de Janeiro <br/>
+                    Tres Rios, Freguesia<br/>
+                    Numero 555
+                </p>
+        </div>
+    </main>
+{% endblock conteudo %}
+
+
+

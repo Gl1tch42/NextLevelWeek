@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+        <title>Ecoleta</title>
+    {% endblock title %}
+
+    {% block styles %}
+        <link rel="stylesheet" href="styles/home.css">
+        <link rel="stylesheet" href="styles/modal.css">
+    {% endblock styles %}
+
+    {% set SetId = "page-home" %}
+
+    {% block conteudo %}
+        <div class="content">
+
+            <header>
+
+                <img src="icones/logo.svg" alt="Ecoleta">
+                <a href="/creatpoint">
+                    <span></span>
+                    cadastre um ponto de coleta
+                </a>
+
+            </header>
+
+            <main>
+                <h1>seu marketplace de coleta</h1>
+                <p>ajudamos a encontrar pontos de coleta de forma eficiente</p>
+                <a href="#"><span></span>pesquisar ponto de coleta</a>
+            </main>
+            
+    
+        </div>
+    {% endblock conteudo %}
+    
+    {% block modal %}
+        {%include "partes/modal.html"%}
+    {% endblock modal %}
+    
+    {% block script %}
+        <Script src="scripts/index.js"></Script>
+    {% endblock script %}
+    
