@@ -6,7 +6,7 @@
 
     {% block styles %}
         <link rel="stylesheet" href="styles/creatpoint.css">
-        <link rel="stylesheet" href="styles/responsive.css">
+        <link rel="stylesheet" href="styles/modal.css">
     {% endblock styles %}
     
 
@@ -14,7 +14,7 @@
     {% block conteudo %}
         {% include "partes/page-header.html" %}
             
-            <form action="">
+            <form action="/savepoint" method = "POST">
                 <h1>cadastro do ponto de coleta</h1>
 
                 <fieldset>
@@ -65,7 +65,7 @@
 
                         <div class="field">
 
-                            <label for="c">Cidade</label>
+                            <label for="city">Cidade</label>
                             <select name="city" disabled required = "required">
                                 <option value="">Selecione a Cidade</option>
                             </select>
@@ -86,27 +86,27 @@
                         <h2>itens de coleta</h2>
                     </legend>
                     <div class="itens-g">
-                        <li data-id="1">
+                        <li data-id="Lâmpadas">
                             <img src="icones/lampadas.svg" alt="Lâmpadas">
                             <span>Lâmpadas</span>
                         </li>
-                        <li data-id="2">
+                        <li data-id="Pilhas e baterias">
                             <img src="icones/baterias.svg" alt="Pilhas e baterias">
                             <span>Pilhas e baterias</span>
                         </li>
-                        <li data-id="3">
+                        <li data-id="papeis e papelão">
                             <img src="icones/papeis-papelao.svg" alt="papeis e papelão">
                             <span>papeis e papelão</span>
                         </li>
-                        <li data-id="4">
+                        <li data-id="residuos eletronicos">
                             <img src="icones/eletronicos.svg" alt="residuos eletronicos">
                             <span>residuos eletronicos</span>
                         </li>
-                        <li data-id="5">
+                        <li data-id="residuos organicos">
                             <img src="icones/organicos.svg" alt="residuos organicos">
                             <span>residuos organicos</span>
                         </li>
-                        <li data-id="6">
+                        <li data-id="Oleo de cozinha">
                             <img src="icones/oleo.svg" alt="Oleo de cozinha">
                             <span>Oleo de cozinha</span>
                         </li>
@@ -117,9 +117,16 @@
 
                 <button type="submit">cadastrar ponto de coleta</button>
             </form>
-
+            
+        
     {% endblock conteudo %}
 
+    {% block modal %}
+        {% if saved %}
+                {% include "partes/sucesso.html"%}
+        {% endif %}
+    {% endblock modal %}
+    
 
     {% block script %}
         <script src="scripts/creatpoint.js"></script>
